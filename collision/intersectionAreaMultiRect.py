@@ -11,7 +11,9 @@ def intersectionAreaMultiRect(rectangles):
         if not isCorrectRect(rect):
              raise Exception("Обнаружен некорректный прямоугольник")
 
+    # переменная для суммы всех площадей пересечения
     total_area = 0
+    
     for i in range(len(rectangles)):
         for j in range(i + 1, len(rectangles)):
             total_area += intersectionAreaRect(rectangles[i], rectangles[j])
